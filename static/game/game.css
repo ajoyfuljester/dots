@@ -1,0 +1,19 @@
+.board {
+    --width: 8;
+    --height: 8;
+
+    display: grid;
+    grid-template-columns: repeat(var(--width), 1fr);
+    grid-template-rows: repeat(var(--height), 1fr);
+
+    aspect-ratio: 1 / 1;
+    width: clamp(64px, 640px, 100vmin);
+    text-align: center;
+}
+
+.board > div {
+    aspect-ratio: 1 / 1;
+    display: grid;
+    place-items: center;
+    border: 1px solid #0005;
+}
